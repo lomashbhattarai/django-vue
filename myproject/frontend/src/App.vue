@@ -16,18 +16,19 @@
     </v-toolbar>
 
     <v-content>
-      <HelloWorld/>
+      <router-view />
+      <!-- <dashboard/> -->
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import dashboard from './components/dashboard'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    dashboard
   },
   data () {
     return {

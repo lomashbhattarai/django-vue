@@ -6,7 +6,7 @@ class Student(models.Model):
     dob = models.DateField()
     father_name = models.CharField(max_length=30)
     mother_name = models.CharField(max_length=30)
-
+    profile_image = models.ImageField(blank=True, null=True,upload_to="images/students/")
     def __str__(self):
         return self.first_name + self.last_name
 
@@ -46,6 +46,7 @@ class Teacher(models.Model):
     dob = models.DateField()
     subject = models.ManyToManyField(Subject)
     level = models.ManyToManyField(Level)
+    profile_image = models.ImageField(blank=True, null=True,upload_to="images/teachers/")
 
     def __str__(self):
         return self.first_name + self.last_name
